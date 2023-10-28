@@ -5,9 +5,9 @@
   become: yes
   become_user: root
   tasks:
-    - name: ensure wireshark & nginx is at the latest version
+    - name: ensure nginx is uninstalled
       yum:
-        name: wireshark & nginx
+        name: nginx
         state: absent
 
 - name: update DB server
@@ -20,7 +20,7 @@
       apt: 
         update_cache: yes
 
-    - name: ensure wireshark & nginx is at the latest version
+    - name: ensure nginx is uninstalled
       apt:
-        name: wireshark & nginx
+        name: nginx
         state: absent
