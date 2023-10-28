@@ -5,10 +5,10 @@
   become: yes
   become_user: root
   tasks:
-    - name: ensure wireshark is uninstalled
+    - name: ensure wireshark is installed
       yum:
         name: wireshark
-        state: absent
+        state: latest
 
 - name: update DB server
   hosts: db
@@ -20,7 +20,7 @@
       apt: 
         update_cache: yes
 
-    - name: ensure wireshark is uninstalled
+    - name: ensure wireshark is installed
       apt:
-        name: nginx
-        state: absent
+        name: wireshark
+        state: latest
