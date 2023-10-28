@@ -24,11 +24,3 @@
       apt:
         name: wireshark
         state: latest
-
-    - name: Change file ownership, group and permission
-      ansible.builtin.file:
-      path: /home/ubuntu/new-folder
-      state: directory
-      mode: '0644'
-
-      
