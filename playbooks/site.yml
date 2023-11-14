@@ -22,7 +22,7 @@
 - name: installing db
   import_playbook: ../static-assignments/db.yml
 
+- hosts: lb
 - name: Loadbalancers assignment
-  hosts: lb
-    - import_playbook: ../static-assignments/loadbalancers.yml
-        when: load_balancer_is_required 
+  import_playbook: ../static-assignments/loadbalancers.yml
+  when: load_balancer_is_required 
